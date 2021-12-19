@@ -47,7 +47,7 @@ const consoleTransport = new transports.Console(options.console);
  */
 const logger = createLogger({
     transports:
-        process.env.ENV === "PROD"
+        process.env.NODE_ENV === "production"
             ? [consoleTransport, fileTransport]
             : [consoleTransport],
     exitOnError: false,
