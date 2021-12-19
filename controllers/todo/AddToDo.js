@@ -8,6 +8,11 @@ const logger = require("../../utils/logger");
  * @type        POST
  * @route       /todo/api/todo/create
  * @access      Private
+ *
+ * @param       {String} userID
+ * @param       {String} title
+ * @param       {Boolean} [isCompleted=true]
+ * @param       {String} priority
  */
 const AddToDo = async (req, res) => {
     try {

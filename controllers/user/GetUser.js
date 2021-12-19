@@ -8,6 +8,8 @@ const logger = require("../../utils/logger");
  * @type        GET
  * @route       /todo/api/user/details
  * @access      Private
+ *
+ * @param       {String} userID
  */
 const GetUser = async (req, res) => {
     try {

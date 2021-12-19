@@ -8,6 +8,8 @@ const logger = require("../../utils/logger");
  * @type        DELETE
  * @route       /todo/api/user/delete
  * @access      Private
+ *
+ * @param       {String} userID
  */
 const DeleteUser = async (req, res) => {
     try {

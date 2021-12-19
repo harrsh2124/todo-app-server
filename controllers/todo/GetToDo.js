@@ -7,6 +7,9 @@ const logger = require("../../utils/logger");
  * @type        GET
  * @route       /todo/api/todo/details?id=:id
  * @access      Private
+ *
+ * @param       {String} userID
+ * @param       {Number} todoID - ID of the item to fetch.
  */
 const GetToDo = async (req, res) => {
     try {

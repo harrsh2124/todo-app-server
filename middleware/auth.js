@@ -5,6 +5,9 @@ require("dotenv").config();
 /**
  * @description Extract the user ID out of Bearer token.
  * @author      Harrsh Patel <me@harrsh.com>
+ *
+ * @param       {String} authorization - Authorization token from the request header.
+ * @example     Bearer <token>
  */
 const authenticateToken = () => {
     return [

@@ -8,6 +8,12 @@ const logger = require("../../utils/logger");
  * @type        POST
  * @route       /todo/api/auth/signup
  * @access      Public
+ *
+ * @param       {String} username
+ * @param       {String} name
+ * @param       {String} email
+ * @param       {String} password
+ * @param       {String} confirmationPassword
  */
 const UserSignUp = async (req, res) => {
     try {

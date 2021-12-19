@@ -9,11 +9,16 @@ const cloudinary = require("../../utils/cloudinary");
  * @type        PUT
  * @route       /todo/api/user/update/profile-photo
  * @access      Private
+ *
+ * @param       {String} userID
+ * @param       {Form:String} [cloudinaryID]
+ * @param       {Form:File} [profilePhotoFile] - Only JPEG or PNG photos of size lesser than 5MB.
  */
 const HandleProfilePhoto = async (req, res) => {
     try {
         const userID = req.auth;
-        const requestPayload = { ...req.body };
+        const { cloudinaryID } = { ...req.body };
+        const requestPayload = {};
 
         const options = {
             new: true,
@@ -26,10 +31,8 @@ const HandleProfilePhoto = async (req, res) => {
             });
         }
 
-        if (requestPayload.cloudinaryID) {
-            const result = await cloudinary.uploader.destroy(
-                requestPayload.cloudinaryID
-            );
+        if (cloudinaryID) {
+            const result = await cloudinary.uploader.destroy(cloudinaryID);
 
             if (result.result === "ok") {
                 requestPayload["profilePhoto"] = {};
@@ -49,7 +52,7 @@ const HandleProfilePhoto = async (req, res) => {
             requestPayload["profilePhoto"] = profilePhoto;
         }
 
-        existingUser = await User.findByIdAndUpdate(
+        const existingUser = await User.findByIdAndUpdate(
             userID,
             requestPayload,
             options

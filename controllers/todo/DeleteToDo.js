@@ -8,6 +8,9 @@ const logger = require("../../utils/logger");
  * @type        DELETE
  * @route       /todo/api/todo/delete?id=:id
  * @access      Private
+ *
+ * @param       {String} userID
+ * @param       {Number} todoID - ID of the item to delete.
  */
 const DeleteToDo = async (req, res) => {
     try {

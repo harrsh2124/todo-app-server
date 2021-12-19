@@ -8,6 +8,12 @@ const logger = require("../../utils/logger");
  * @type        PUT
  * @route       /todo/api/user/update
  * @access      Private
+ *
+ * @param       {String} userID
+ * @param       {String} [name]
+ * @param       {String} [email]
+ * @param       {String} [password]
+ * @param       {String} [confirmationPassword]
  */
 const UpdateUser = async (req, res) => {
     try {

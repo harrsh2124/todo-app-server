@@ -7,6 +7,12 @@ const logger = require("../../utils/logger");
  * @type        PUT
  * @route       /todo/api/todo/update?id=:id
  * @access      Private
+ *
+ * @param       {String} userID
+ * @param       {Number} todoID - ID of the item to fetch.
+ * @param       {String} [title]
+ * @param       {String} [isCompleted]
+ * @param       {String} [priority]
  */
 const UpdateToDo = async (req, res) => {
     try {
