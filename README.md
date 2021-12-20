@@ -1,6 +1,6 @@
 # ToDo App (Server)
 
-Server-side code for the MERN ToDo App made using MERN stack and socket.io
+Server-side code for the MERN ToDo App.
 
 ---
 
