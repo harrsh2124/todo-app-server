@@ -8,8 +8,6 @@ Server-side code for the MERN ToDo App made using MERN stack and socket.io
 
 To run this project, you will need to add the following environment variables to your .env file
 
-`ENV=PROD`
-
 `MONGO_URI=<Connection string for MongoDB>`
 
 `SECRET=<A strong random string>`
